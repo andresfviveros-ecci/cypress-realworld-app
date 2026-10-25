@@ -52,3 +52,16 @@ amplifytools.xcconfig
 !.yarn/releases
 !.yarn/sdks
 !.yarn/versions
+
+# Playwright
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
+
+# Local
+server.log
+# El proyecto usa yarn (yarn.lock); el lock de npm es solo local
+package-lock.json
+playwright-tests/*.zip
