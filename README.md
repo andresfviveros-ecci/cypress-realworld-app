@@ -1,6 +1,7 @@
 > **Fork con fines académicos.** Este repositorio es un fork de [cypress-io/cypress-realworld-app](https://github.com/cypress-io/cypress-realworld-app) (rama `develop`) con:
 >
 > - **Tarea de pruebas BVA con Playwright:** el informe está en [`playwright-tests/INFORME-BVA.md`](./playwright-tests/INFORME-BVA.md), las pruebas en [`playwright-tests/ejercicio-bva-password/`](./playwright-tests/ejercicio-bva-password/) y las capturas de evidencia en [`evidencia/`](./playwright-tests/ejercicio-bva-password/evidencia/).
+> - **Taller 3 (Playwright + ISTQB, rama `taller3-playwright`):** pruebas en [`playwright/`](./playwright/) y evidencias en [`docs/evidencias/`](./docs/evidencias/). Se ejecuta con `yarn test:pw` (config `playwright.taller3.config.ts`).
 > - **Docker propio:** `docker compose up` levanta el frontend en `http://localhost:3000` y la API en `http://localhost:3001`.
 > - **Ejecutar las pruebas** (con la app corriendo): `npx playwright test --project=chromium`
 

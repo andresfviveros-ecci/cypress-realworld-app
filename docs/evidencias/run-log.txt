@@ -1,0 +1,374 @@
+# yarn test:pw  (2026-10-25 06:43 UTC)
+# Playwright Version 1.64.1, Node v24.14.0, Chromium headless shell 156.0.8078.4
+
+
+Running 27 tests using 1 worker
+
+  ok  1 [setup] › playwright\fixtures\auth.setup.ts:6:6 › log in as Heath93 and store the session (2.3s)
+  ok  2 [chromium] › playwright\point1-locators\locators.spec.ts:11:7 › Point 1 - Locators › E1 getByRole: New transaction button in the top bar (2.2s)
+  ok  3 [chromium] › playwright\point1-locators\locators.spec.ts:22:7 › Point 1 - Locators › E2 getByPlaceholder: contact search field (1.9s)
+  ok  4 [chromium] › playwright\point1-locators\locators.spec.ts:32:7 › Point 1 - Locators › E3 getByText: recipient Kristian Bradtke in the contact list (1.9s)
+  ok  5 [chromium] › playwright\point1-locators\locators.spec.ts:45:7 › Point 1 - Locators › E4 getByTestId: account balance in the side menu (2.3s)
+  ok  6 [chromium] › playwright\point1-locators\locators.spec.ts:56:7 › Point 1 - Locators › CSS locator compared with a user-facing locator for the Mine tab (2.1s)
+[strictness] locator.click: Error: strict mode violation: getByRole('tab') resolved to 3 elements: |     1) <a href="/" role="tab" tabindex="0" aria-selected="true" data-test="nav-public-tab" class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit Mui-selected css-u7g6hc-MuiButtonBase-root-MuiTab-root">…</a> aka getByTestId('nav-public-tab') |     2) <a role="tab" tabindex="-1" href="/contacts" aria-selected="false" data-test="nav-contacts-tab" class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit css-u7g6hc-MuiButtonBase-root-MuiTab-root">…</a> aka getByTestId('nav-contacts-tab') |     3) <a role="tab" tabindex="-1" href="/personal" aria-selected="false" data-test="nav-personal-tab" class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit css-u7g6hc-MuiButtonBase-root-MuiTab-root">…</a> aka getByTestId('nav-personal-tab') | 
+  ok  7 [chromium] › playwright\point1-locators\locators.spec.ts:67:7 › Point 1 - Locators › strictness: an ambiguous locator fails and a precise one fixes it (2.3s)
+  ok  8 [chromium] › playwright\point2-actions\actions.spec.ts:14:7 › Point 2 - Actions › payment flow: New -> search contact -> pick recipient -> amount and note -> Pay (3.1s)
+  ok  9 [chromium] › playwright\point2-actions\actions.spec.ts:51:9 › Point 2 - Actions › signed out › check(): Remember me checkbox on the sign-in form (2.2s)
+  ok 10 [chromium] › playwright\point3-assertions\assertions.spec.ts:11:7 › Point 3 - Assertions › payment flow with state, text/value, page, API and negative/generic assertions (3.9s)
+  x  11 [chromium] › playwright\point4-decision-table\api-validation.spec.ts:29:9 › Point 4 - API validation of the payment rule › TC-TRANS-017: amount 0 is rejected by the API (CA-02) (430ms)
+  x  12 [chromium] › playwright\point4-decision-table\api-validation.spec.ts:29:9 › Point 4 - API validation of the payment rule › TC-TRANS-018: empty note is rejected by the API (CA-03) (610ms)
+  ok 13 [chromium] › playwright\point4-decision-table\decision-table.spec.ts:119:9 › Point 4 - Decision table: confirm a payment › R1 TC-TRANS-010: recipient=F, amount=-, note=- (2.0s)
+  ok 14 [chromium] › playwright\point4-decision-table\decision-table.spec.ts:119:9 › Point 4 - Decision table: confirm a payment › R2 TC-TRANS-011: recipient=T, amount=positive, note=T (2.2s)
+  ok 15 [chromium] › playwright\point4-decision-table\decision-table.spec.ts:119:9 › Point 4 - Decision table: confirm a payment › R3 TC-TRANS-012: recipient=T, amount=positive, note=F (2.4s)
+  ok 16 [chromium] › playwright\point4-decision-table\decision-table.spec.ts:119:9 › Point 4 - Decision table: confirm a payment › R4 TC-TRANS-013: recipient=T, amount=empty, note=T (2.5s)
+  x  17 [chromium] › playwright\point4-decision-table\decision-table.spec.ts:119:9 › Point 4 - Decision table: confirm a payment › R5 TC-TRANS-014: recipient=T, amount=zero, note=T (12.8s)
+  ok 18 [chromium] › playwright\point4-decision-table\decision-table.spec.ts:119:9 › Point 4 - Decision table: confirm a payment › R6 TC-TRANS-015: recipient=T, amount=empty, note=F (2.5s)
+  x  19 [chromium] › playwright\point4-decision-table\decision-table.spec.ts:119:9 › Point 4 - Decision table: confirm a payment › R7 TC-TRANS-016: recipient=T, amount=zero, note=F (7.3s)
+  ok 20 [chromium] › playwright\point5-state-transition\request-state.spec.ts:65:7 › Point 5 - State transitions of a money request › TC-STATE-01 valid sequence: create request (T1) -> receiver accepts (T2) (6.0s)
+  x  21 [chromium] › playwright\point5-state-transition\request-state.spec.ts:118:7 › Point 5 - State transitions of a money request › TC-STATE-02 valid: receiver rejects a pending request (T4) and no money moves (4.0s)
+  ok 22 [chromium] › playwright\point5-state-transition\request-state.spec.ts:167:7 › Point 5 - State transitions of a money request › TC-STATE-03 valid: accept with insufficient balance (T3) uses a bank withdrawal (5.7s)
+  ok 23 [chromium] › playwright\point5-state-transition\request-state.spec.ts:194:7 › Point 5 - State transitions of a money request › TC-STATE-04 invalid via UI: an accepted request offers no Accept/Reject (5.0s)
+  x  24 [chromium] › playwright\point5-state-transition\request-state.spec.ts:215:7 › Point 5 - State transitions of a money request › TC-STATE-05 invalid via API: accepting an already accepted request again (674ms)
+  x  25 [chromium] › playwright\point5-state-transition\request-state.spec.ts:242:7 › Point 5 - State transitions of a money request › TC-STATE-06 invalid via API: accepting a request that was rejected (954ms)
+  x  26 [chromium] › playwright\point5-state-transition\request-state.spec.ts:272:7 › Point 5 - State transitions of a money request › guard check via API: the requester cannot accept their own request (676ms)
+  ok 27 [chromium] › playwright\smoke.spec.ts:4:5 › smoke: logged-in user sees the New button (2.1s)
+
+
+  1) [chromium] › playwright\point4-decision-table\api-validation.spec.ts:29:9 › Point 4 - API validation of the payment rule › TC-TRANS-017: amount 0 is rejected by the API (CA-02) 
+
+    Error: API should answer 400 Bad Request
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 400
+    Received: 200
+        at <repo>\playwright\point4-decision-table\api-validation.spec.ts:55:70)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1654:9)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1134:11)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1652:7)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-taller3\point4-decision-table-api--5dd7e--rejected-by-the-API-CA-02--chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-taller3\point4-decision-table-api--5dd7e--rejected-by-the-API-CA-02--chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-taller3\point4-decision-table-api--5dd7e--rejected-by-the-API-CA-02--chromium\trace.zip
+    Usage:
+
+        yarn playwright show-trace test-results-taller3\point4-decision-table-api--5dd7e--rejected-by-the-API-CA-02--chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [chromium] › playwright\point4-decision-table\api-validation.spec.ts:29:9 › Point 4 - API validation of the payment rule › TC-TRANS-018: empty note is rejected by the API (CA-03) 
+
+    Error: API should answer 400 Bad Request
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 400
+    Received: 200
+        at <repo>\playwright\point4-decision-table\api-validation.spec.ts:55:70)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1654:9)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1134:11)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1652:7)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-taller3\point4-decision-table-api--63767--rejected-by-the-API-CA-03--chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-taller3\point4-decision-table-api--63767--rejected-by-the-API-CA-03--chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-taller3\point4-decision-table-api--63767--rejected-by-the-API-CA-03--chromium\trace.zip
+    Usage:
+
+        yarn playwright show-trace test-results-taller3\point4-decision-table-api--63767--rejected-by-the-API-CA-03--chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [chromium] › playwright\point4-decision-table\decision-table.spec.ts:119:9 › Point 4 - Decision table: confirm a payment › R5 TC-TRANS-014: recipient=T, amount=zero, note=T 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Please enter a valid amount')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "soft toBeVisible" getByText('Please enter a valid amount') with timeout 5000ms
+      - waiting for getByText('Please enter a valid amount')
+
+        at <repo>\playwright\point4-decision-table\decision-table.spec.ts:142:71)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1654:9)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1134:11)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1652:7)
+
+    Error: expect(locator).toBeDisabled() failed
+
+    Locator:  getByRole('button', { name: 'Pay' })
+    Expected: disabled
+    Received: enabled
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "soft toBeDisabled" getByRole('button', { name: 'Pay' }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Pay' })
+        14 × locator resolved to <button tabindex="0" type="submit" data-test="transaction-create-submit-payment" class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-fullWidth TransactionCreateStepTwo-submit css-q6gao2-MuiButtonBase-root-MuiButton-root">…</button>
+           - unexpected value "enabled"
+
+        at <repo>\playwright\point4-decision-table\decision-table.spec.ts:149:43)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1654:9)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1134:11)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1652:7)
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 1
+        at <repo>\playwright\point4-decision-table\decision-table.spec.ts:171:54)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1654:9)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1134:11)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1652:7)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-taller3\point4-decision-table-deci-6df1f-ipient-T-amount-zero-note-T-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-taller3\point4-decision-table-deci-6df1f-ipient-T-amount-zero-note-T-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-taller3\point4-decision-table-deci-6df1f-ipient-T-amount-zero-note-T-chromium\trace.zip
+    Usage:
+
+        yarn playwright show-trace test-results-taller3\point4-decision-table-deci-6df1f-ipient-T-amount-zero-note-T-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [chromium] › playwright\point4-decision-table\decision-table.spec.ts:119:9 › Point 4 - Decision table: confirm a payment › R7 TC-TRANS-016: recipient=T, amount=zero, note=F 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByText('Please enter a valid amount')
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "soft toBeVisible" getByText('Please enter a valid amount') with timeout 5000ms
+      - waiting for getByText('Please enter a valid amount')
+
+        at <repo>\playwright\point4-decision-table\decision-table.spec.ts:142:71)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1654:9)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1134:11)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1652:7)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-taller3\point4-decision-table-deci-cc010-ipient-T-amount-zero-note-F-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-taller3\point4-decision-table-deci-cc010-ipient-T-amount-zero-note-F-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-taller3\point4-decision-table-deci-cc010-ipient-T-amount-zero-note-F-chromium\trace.zip
+    Usage:
+
+        yarn playwright show-trace test-results-taller3\point4-decision-table-deci-cc010-ipient-T-amount-zero-note-F-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [chromium] › playwright\point5-state-transition\request-state.spec.ts:118:7 › Point 5 - State transitions of a money request › TC-STATE-02 valid: receiver rejects a pending request (T4) and no money moves 
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Object {
+    -   "receiver": 93026,
+    -   "sender": 150953,
+    +   "receiver": 90526,
+    +   "sender": 153453,
+      }
+        at <repo>\playwright\point5-state-transition\request-state.spec.ts:163:19)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1654:9)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1134:11)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1652:7)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-taller3\point5-state-transition-re-7cb09-quest-T4-and-no-money-moves-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-taller3\point5-state-transition-re-7cb09-quest-T4-and-no-money-moves-chromium\test-failed-2.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-taller3\point5-state-transition-re-7cb09-quest-T4-and-no-money-moves-chromium\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-taller3\point5-state-transition-re-7cb09-quest-T4-and-no-money-moves-chromium\trace.zip
+    Usage:
+
+        yarn playwright show-trace test-results-taller3\point5-state-transition-re-7cb09-quest-T4-and-no-money-moves-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [chromium] › playwright\point5-state-transition\request-state.spec.ts:215:7 › Point 5 - State transitions of a money request › TC-STATE-05 invalid via API: accepting an already accepted request again 
+
+    Error: status for a resolved request
+
+    expect(received).toBeGreaterThanOrEqual(expected)
+
+    Expected: >= 400
+    Received:    204
+        at <repo>\playwright\point5-state-transition\request-state.spec.ts:237:69)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1654:9)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1134:11)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1652:7)
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Object {
+    -   "receiver": 90526,
+    -   "sender": 153453,
+    +   "receiver": 88026,
+    +   "sender": 155953,
+      }
+        at <repo>\playwright\point5-state-transition\request-state.spec.ts:238:19)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1654:9)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1134:11)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1652:7)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-taller3\point5-state-transition-re-c1661-eady-accepted-request-again-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-taller3\point5-state-transition-re-c1661-eady-accepted-request-again-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-taller3\point5-state-transition-re-c1661-eady-accepted-request-again-chromium\trace.zip
+    Usage:
+
+        yarn playwright show-trace test-results-taller3\point5-state-transition-re-c1661-eady-accepted-request-again-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [chromium] › playwright\point5-state-transition\request-state.spec.ts:242:7 › Point 5 - State transitions of a money request › TC-STATE-06 invalid via API: accepting a request that was rejected 
+
+    Error: status for a resolved request
+
+    expect(received).toBeGreaterThanOrEqual(expected)
+
+    Expected: >= 400
+    Received:    204
+        at <repo>\playwright\point5-state-transition\request-state.spec.ts:266:69)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1654:9)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1134:11)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1652:7)
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "rejected"
+    Received: "accepted"
+        at <repo>\playwright\point5-state-transition\request-state.spec.ts:267:39)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1654:9)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1134:11)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1652:7)
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Object {
+    -   "receiver": 90526,
+    -   "sender": 153453,
+    +   "receiver": 88026,
+    +   "sender": 155953,
+      }
+        at <repo>\playwright\point5-state-transition\request-state.spec.ts:268:19)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1654:9)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1134:11)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1652:7)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-taller3\point5-state-transition-re-e11f7-a-request-that-was-rejected-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-taller3\point5-state-transition-re-e11f7-a-request-that-was-rejected-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-taller3\point5-state-transition-re-e11f7-a-request-that-was-rejected-chromium\trace.zip
+    Usage:
+
+        yarn playwright show-trace test-results-taller3\point5-state-transition-re-e11f7-a-request-that-was-rejected-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8) [chromium] › playwright\point5-state-transition\request-state.spec.ts:272:7 › Point 5 - State transitions of a money request › guard check via API: the requester cannot accept their own request 
+
+    Error: status when the sender accepts
+
+    expect(received).toBeGreaterThanOrEqual(expected)
+
+    Expected: >= 400
+    Received:    204
+        at <repo>\playwright\point5-state-transition\request-state.spec.ts:295:70)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1654:9)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1134:11)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1652:7)
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: "pending"
+    Received: "accepted"
+        at <repo>\playwright\point5-state-transition\request-state.spec.ts:296:39)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1654:9)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1134:11)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1652:7)
+
+    Error: expect(received).toEqual(expected) // deep equality
+
+    - Expected  - 2
+    + Received  + 2
+
+      Object {
+    -   "receiver": 93026,
+    -   "sender": 150953,
+    +   "receiver": 90526,
+    +   "sender": 153453,
+      }
+        at <repo>\playwright\point5-state-transition\request-state.spec.ts:297:19)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1654:9)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1134:11)
+        at <repo>\node_modules\playwright\lib\worker\workerProcessEntry.js:1652:7)
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results-taller3\point5-state-transition-re-ce961-ot-accept-their-own-request-chromium\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results-taller3\point5-state-transition-re-ce961-ot-accept-their-own-request-chromium\error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results-taller3\point5-state-transition-re-ce961-ot-accept-their-own-request-chromium\trace.zip
+    Usage:
+
+        yarn playwright show-trace test-results-taller3\point5-state-transition-re-ce961-ot-accept-their-own-request-chromium\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  8 failed
+    [chromium] › playwright\point4-decision-table\api-validation.spec.ts:29:9 › Point 4 - API validation of the payment rule › TC-TRANS-017: amount 0 is rejected by the API (CA-02) 
+    [chromium] › playwright\point4-decision-table\api-validation.spec.ts:29:9 › Point 4 - API validation of the payment rule › TC-TRANS-018: empty note is rejected by the API (CA-03) 
+    [chromium] › playwright\point4-decision-table\decision-table.spec.ts:119:9 › Point 4 - Decision table: confirm a payment › R5 TC-TRANS-014: recipient=T, amount=zero, note=T 
+    [chromium] › playwright\point4-decision-table\decision-table.spec.ts:119:9 › Point 4 - Decision table: confirm a payment › R7 TC-TRANS-016: recipient=T, amount=zero, note=F 
+    [chromium] › playwright\point5-state-transition\request-state.spec.ts:118:7 › Point 5 - State transitions of a money request › TC-STATE-02 valid: receiver rejects a pending request (T4) and no money moves 
+    [chromium] › playwright\point5-state-transition\request-state.spec.ts:215:7 › Point 5 - State transitions of a money request › TC-STATE-05 invalid via API: accepting an already accepted request again 
+    [chromium] › playwright\point5-state-transition\request-state.spec.ts:242:7 › Point 5 - State transitions of a money request › TC-STATE-06 invalid via API: accepting a request that was rejected 
+    [chromium] › playwright\point5-state-transition\request-state.spec.ts:272:7 › Point 5 - State transitions of a money request › guard check via API: the requester cannot accept their own request 
+  19 passed (1.5m)
