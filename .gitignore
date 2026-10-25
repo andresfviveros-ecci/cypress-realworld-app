@@ -59,6 +59,8 @@ amplifytools.xcconfig
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+/test-results-taller3/
+/playwright-report-taller3/
 
 # Local
 server.log
