@@ -1,0 +1,29 @@
+{
+  "transactionId": "tBLJAbsrsn",
+  "amount": "$25.00",
+  "request": {
+    "method": "PATCH",
+    "url": "http://localhost:3001/transactions/tBLJAbsrsn",
+    "body": {
+      "id": "tBLJAbsrsn",
+      "requestStatus": "rejected"
+    }
+  },
+  "response": {
+    "status": 204
+  },
+  "storedAfter": {
+    "requestStatus": "rejected",
+    "status": "complete"
+  },
+  "balances": {
+    "before": {
+      "Heath93": "$1509.53",
+      "Arvilla_Hegmann": "$930.26"
+    },
+    "after": {
+      "Heath93": "$1534.53",
+      "Arvilla_Hegmann": "$905.26"
+    }
+  }
+}

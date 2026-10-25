@@ -1,0 +1,8 @@
+stateDiagram-v2
+    direction TB
+    [*] --> Pending: T1 create request
+    Pending --> Accepted: T2 accept [balance >= amount]
+    Pending --> Accepted: T3 accept [balance < amount]
+    Pending --> Rejected: T4 reject
+    Accepted --> [*]
+    Rejected --> [*]

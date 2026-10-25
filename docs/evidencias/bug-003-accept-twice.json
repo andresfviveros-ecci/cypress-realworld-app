@@ -1,0 +1,24 @@
+{
+  "request": {
+    "method": "PATCH",
+    "url": "http://localhost:3001/transactions/Mj8L-v_sE",
+    "body": {
+      "requestStatus": "accepted"
+    }
+  },
+  "response": {
+    "status": 204,
+    "statusText": "No Content",
+    "body": ""
+  },
+  "balances": {
+    "before": {
+      "Heath93": "$1534.53",
+      "Arvilla_Hegmann": "$905.26"
+    },
+    "after": {
+      "Heath93": "$1559.53",
+      "Arvilla_Hegmann": "$880.26"
+    }
+  }
+}
