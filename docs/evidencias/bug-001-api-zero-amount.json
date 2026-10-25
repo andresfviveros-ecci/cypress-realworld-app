@@ -1,0 +1,40 @@
+{
+  "actor": "Heath93",
+  "request": {
+    "method": "POST",
+    "url": "http://localhost:3001/transactions",
+    "body": {
+      "transactionType": "payment",
+      "receiverId": "GjWovtg2hr",
+      "amount": 0,
+      "description": "QA zero amount test"
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "transaction": {
+        "id": "0Gye03hh6z",
+        "uuid": "9eb9f455-09fa-496a-b998-87b29ea98fae",
+        "amount": 0,
+        "description": "QA zero amount test",
+        "receiverId": "GjWovtg2hr",
+        "senderId": "uBmeaz5pX",
+        "privacyLevel": "public",
+        "status": "complete",
+        "createdAt": "2026-10-25T06:44:28.785Z",
+        "modifiedAt": "2026-10-25T06:44:28.785Z"
+      }
+    }
+  },
+  "balances": {
+    "before": {
+      "Heath93": "$1509.53",
+      "Arvilla_Hegmann": "$930.26"
+    },
+    "after": {
+      "Heath93": "$1509.53",
+      "Arvilla_Hegmann": "$930.26"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "actor": "Heath93",
+  "request": {
+    "method": "POST",
+    "url": "http://localhost:3001/transactions",
+    "body": {
+      "transactionType": "payment",
+      "receiverId": "GjWovtg2hr",
+      "amount": 10,
+      "description": ""
+    }
+  },
+  "response": {
+    "status": 200,
+    "body": {
+      "transaction": {
+        "id": "bSAXpQkvX",
+        "uuid": "3cb5221c-1117-4f96-9c03-a621a7c2d594",
+        "amount": 1000,
+        "description": "",
+        "receiverId": "GjWovtg2hr",
+        "senderId": "uBmeaz5pX",
+        "privacyLevel": "public",
+        "status": "complete",
+        "createdAt": "2026-10-25T06:44:30.273Z",
+        "modifiedAt": "2026-10-25T06:44:30.273Z"
+      }
+    }
+  },
+  "balances": {
+    "before": {
+      "Heath93": "$1509.53",
+      "Arvilla_Hegmann": "$930.26"
+    },
+    "after": {
+      "Heath93": "$1499.53",
+      "Arvilla_Hegmann": "$940.26"
+    }
+  }
+}
